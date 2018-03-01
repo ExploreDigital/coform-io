@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Your conversational data collection platform</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+
+		<meta name="description" content="Turn any form into a conversational form interface.">
+		<meta name="keywords" content="conversational interfaces, conversational form, interface, bot, chatbot">
+
+		<link rel="author" href=""/>
+		<link rel="publisher" href="coform.io"/>
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content=""/>
+		<meta name="twitter:creator" content="">
+		<meta name="twitter:title" content="The worlds first true conversational data collection platform"/>
+		<meta name="twitter:description" content=""/>
+		<meta name="twitter:image" content="" />
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="The worlds first true conversational data collection platform"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="images/share_img.jpg" />
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+
+		<!-- file to overwrite Conversational Form styles -->
+		<link rel="stylesheet" href="build/styles/cf/cf-theming.css?v=1.0.0">
+
+		<link rel="stylesheet" href="build/conversational-form-docs.min.css">
+		<link rel="icon" href="images/logo32.png">
+
+		<script type="text/javascript" src="https://cf-4053.kxcdn.com/conversational-form/0.9.6/conversational-form.min.js" crossorigin></script>
+	</head>
+	<body>
+		<script src="build/conversational-form-examples.min.js" id="examples-script"></script>
+
+		<main class="content">
+			<menu id="small-screen-menu">
+				<h2>Coform</h2>
+
+				<div class="switch-btn">
+					<label class="switch">
+						<input type="checkbox" onclick="window.conversationalFormExamples.toggleConversation(event)">
+						<div class="slider round"></div>
+					</label>
+				</div>
+
+				<div class="hamburger-btn" onclick="window.conversationalFormExamples.toggleMenuState(event)">
+					<svg viewBox="0 0 29 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+							<g transform="translate(-325.000000, -87.000000)" stroke="#FFFFFF" stroke-width="2">
+								<g transform="translate(325.000000, 87.000000)">
+									<path d="M27.4802431,7 L1.23827993,7"></path>
+									<path d="M27.4802431,1 L1.23827993,1"></path>
+									<path d="M27.4802431,13 L1.23827993,13"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</menu>
+			<div class="switch-btn" id="cf-toggle-btn" data-label="Press The Switch To See Coform In Action" data-label-toggled="Press The Switch To See A Standard Form">
+				<label class="switch">
+					<input type="checkbox" onclick="window.conversationalFormExamples.toggleConversation(event)">
+					<div class="slider round"></div>
+				</label>
+			</div>
+
+			<section id="info" role="info">
+				<div class="close-btn" onclick="window.conversationalFormExamples.toggleMenuState()">
+					<svg viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+							<g transform="translate(-328.000000, -83.000000)" stroke="#FFFFFF" stroke-width="2">
+								<g id="close" transform="translate(329.000000, 84.000000)">
+									<path d="M19.6371966,19.2779351 L1.08132646,0.722064927"></path>
+									<path d="M19.4923318,0.722064927 L0.936461672,19.2779351"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+<a href="index.html" style="text-decoration: none"> 
+				<h3 class="logo-text" style="font-size: 28px">
+				<img src="images/logo32.png" style="max-height: 40px; margin-bottom: -12px"> coform
+				</h3></a>
+				<article>
+					<h1 id="writer">
+						Coform Examples 
+					</h1>
+					<h2>
+						Forms. Surveys. Quizzes. Polls... What about order forms? Yep, we have those too.
+					</h2>
+					<div class="github-button__outer">
+						<a class="button-cta" 
+							href="beta-access.html" data-style="mega" >Get Early Access
+						</a>
+					</div>
+					<footer>
+                         <h3>
+							<a href="beta-access.html" target="_blank">Need help improving your forms and surveys?</a>&nbsp&nbsp
+							<a href="tos.html" target="_blank">Terms of Service</a>&nbsp&nbsp
+							<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+						</h3>
+						
+					</footer>
+				</article>
+			</section>
+
+			<script>
+				function examplesChoiceMade(event){
+					event.preventDefault();
+					var file = window.ConversationalForm.getFormData(true)["examples"][0];
+					var cur = window.location.href.split("/")[window.location.href.split("/").length - 1];
+					window.location = window.location.href.split(cur).join(file);
+					return false;
+				}
+			</script>
+
+			<section role="form">
+				<div class="form-outer">
+
+					<!-- Conversational Form will auto-run because of attribute "cf-form" -->
+					<form id="form" cf-form onsubmit="examplesChoiceMade(event)">
+						<fieldset cf-questions="Choose an example" name="examples" id="examples" cf-error="You need to choose one of the examples above">
+							<input type="radio" value="form-example.html" cf-label="Forms" />
+							<input type="radio" value="survey-example.html" cf-label="Surveys" />
+							<input type="radio" value="newsletter-example.html" cf-label="Newsletter Signup" />
+							<input type="radio" value="voice-example.html" cf-label="Voice" />
+						</fieldset>
+					</form>
+
+				</div>
+			</section>
+
+			<section id="cf-context" role="cf-context" cf-context>
+				
+			</section>
+		</main>
+	</body>
+</html>

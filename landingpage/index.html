@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Your conversational data collection platform</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+
+		<meta name="description" content="Turn any form into a conversational form interface.">
+		<meta name="keywords" content="conversational interfaces, conversational form, interface, bot, chatbot">
+
+		<link rel="author" href=""/>
+		<link rel="publisher" href="coform.io"/>
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content=""/>
+		<meta name="twitter:creator" content="">
+		<meta name="twitter:title" content="The worlds first true conversational data collection platform"/>
+		<meta name="twitter:description" content=""/>
+		<meta name="twitter:image" content="" />
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="The worlds first true conversational data collection platform"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="images/share_img.jpg" />
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+
+		<link rel="stylesheet" href="build/conversational-form-docs.min.css?v=1.0.0">
+		
+		<!-- file to overwrite Conversational Form styles -->
+		<link rel="stylesheet" href="build/styles/cf/cf-theming.css?v=1.0.0">
+
+		<link rel="icon" href="images/logo32.png">
+	</head>
+
+	<body>
+		<!-- Load Conversational Form (v0.9.6) -->
+		 <script type="text/javascript" src="https://cf-4053.kxcdn.com/conversational-form/0.9.6/conversational-form.min.js?v=1.0.0" crossorigin></script>
+		<!-- Load docs -->
+		 <script src="build/conversational-form-docs.min.js?v=1.0.0"></script>  
+
+		<!-- dev -> -->
+		<!-- <script id="conversational-form-development" src="../build/conversational-form.js"></script>
+		<script src="build/cf/ConversationalFormDocs.js"></script>
+		<link rel="stylesheet" href="../dist/conversational-form.min.css">  -->
+
+		<main id="conversational-form-docs" class="content">
+			<menu id="small-screen-menu">
+				<h2>Coform</h2>
+
+				<div class="switch-btn">
+					<label class="switch">
+						<input type="checkbox" onclick="window.conversationalFormDocs.toggleConversation(event)">
+						<div class="slider round"></div>
+					</label>
+				</div>
+
+				<div class="hamburger-btn" onclick="window.conversationalFormDocs.toggleMenuState(event)">
+					<svg viewBox="0 0 29 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+							<g transform="translate(-325.000000, -87.000000)" stroke="#FFFFFF" stroke-width="2">
+								<g transform="translate(325.000000, 87.000000)">
+									<path d="M27.4802431,7 L1.23827993,7"></path>
+									<path d="M27.4802431,1 L1.23827993,1"></path>
+									<path d="M27.4802431,13 L1.23827993,13"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</menu>
+
+			<div class="switch-btn" id="cf-toggle-btn" data-label="Press The Switch To See Coform In Action" data-label-toggled="Press The Switch To See A Standard Form">
+				<label class="switch">
+					<input type="checkbox" onclick="window.conversationalFormDocs.toggleConversation(event)">
+					<div class="slider round"></div>
+				</label>
+			</div>
+
+			<section id="info" role="info">
+				<div class="close-btn" onclick="window.conversationalFormDocs.toggleMenuState()">
+					<svg viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+							<g transform="translate(-328.000000, -83.000000)" stroke="#FFFFFF" stroke-width="2">
+								<g id="close" transform="translate(329.000000, 84.000000)">
+									<path d="M19.6371966,19.2779351 L1.08132646,0.722064927"></path>
+									<path d="M19.4923318,0.722064927 L0.936461672,19.2779351"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+<a href="index.html" style="text-decoration: none"> 
+				<h3 class="logo-text" style="font-size: 28px">
+				<img src="images/logo32.png" style="max-height: 40px; margin-bottom: -12px"> coform
+				</h3></a>
+
+				<article>
+					<h1 id="writer">
+						Build Better Forms. Generate More Leads.
+					</h1>
+					<h2 style="color: #474747">
+						The world’s first true conversational data collection platform. 
+					</h2>
+
+
+					<div class="github-button__outer">
+						<a class="button-cta" 
+							href="examples.html">See Examples</a>
+
+						<a class="button-example" 
+							href="beta-access.html" data-style="mega" >Get Early Access</a>
+					</div>
+					
+					<footer>
+                         <h3>
+							<a href="beta-access.html" target="_blank">Need help improving your forms and surveys?</a>&nbsp&nbsp
+							<a href="tos.html" target="_blank">Terms of Service</a>&nbsp&nbsp
+							<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+						</h3>
+						
+					</footer>
+				</article>
+			</section>
+
+			<section id="form" role="form">
+				<form id="cf-form" method="post" action="">
+					<fieldset>
+						<label for="name">What's your name?</label>
+						<input required cf-questions="Hi there! Im Coform a conversational data collection platform. What's your name? 😊" type="text" class="form-control" name="name" id="name">
+					</fieldset>
+
+					<fieldset>
+						<label for="occupation">Occupation</label>
+						<div class="radio">
+						<label>
+							<input cf-questions="Nice to meet you, {previous-answer}! And what do you do?" type="radio" name="occupation" id="occupation-1" value="Marketer">
+							Marketer
+						</label>
+						</div>
+						<div class="radio">
+						<label>
+							<input type="radio" name="occupation" id="occupation-2" value="designer">
+							UX/ UI Designer
+						</label>
+						</div>
+						<div class="radio">
+						<label>
+							<input type="radio" name="occupation" id="occupation-3" value="Web Developer">
+							Web Developer
+						</label>
+						</div>
+						<div class="radio">
+							<label>
+								<input type="radio" name="occupation" id="occupation-2" value="Other">
+								Other
+							</label>
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<label for="company">Company</label>
+						<input cf-questions="What company are you currently representing?" type="text" class="form-control" name="company" id="company">
+					</fieldset>
+
+					<fieldset>
+						<label for="opinion">Will conversational forms be everywhere?</label>
+						<select cf-questions="Cool! So do you think conversational forms are going to reshape the way we collect data?" name="opinion" id="opinion" class="form-control">
+							<option></option>
+							<option>Yes!</option>
+							<option>Maybe</option>
+							<option>Probably Not</option>
+						</select>
+					</fieldset>
+
+					<fieldset>
+						<label for="email">Email</label>
+						<input pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Well, If you want to hear when we go live and get special beta pricing, drop your email below. 👇" type="email" class="form-control" name="email" id="your-email">
+					</fieldset>
+
+					<fieldset style="display: none;">
+						<label for="thats-all">Are you ready to submit the form?</label>
+						<select cf-questions="Are you ready to submit the form?" name="submit-form" id="submit-form" class="form-control">
+							<option></option>
+							<option>Yup</option>
+						</select>
+					</fieldset>
+
+					<fieldset style="display: none;">
+						<label for="thats-all">Want to start over?</label>
+						<select cf-questions="Want to start over?" name="repeat" id="repeat" class="form-control">
+							<option></option>
+							<option>Yes, let's go again</option>
+						</select>
+					</fieldset>
+
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</section>
+
+			<section id="cf-context" role="cf-context" cf-context>
+				
+			</section>
+		</main>
+
+		<!-- <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', '', 'auto');
+			ga('send', 'pageview');
+		</script> -->
+
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+	</body>
+
+</html>

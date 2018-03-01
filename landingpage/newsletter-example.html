@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Your conversational data collection platform</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+
+		<meta name="description" content="Turn any form into a conversational form interface.">
+		<meta name="keywords" content="conversational interfaces, conversational form, interface, bot, chatbot">
+
+		<link rel="author" href=""/>
+		<link rel="publisher" href="coform.io"/>
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content=""/>
+		<meta name="twitter:creator" content="">
+		<meta name="twitter:title" content="The worlds first true conversational data collection platform"/>
+		<meta name="twitter:description" content=""/>
+		<meta name="twitter:image" content="" />
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="The worlds first true conversational data collection platform"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="images/share_img.jpg" />
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+
+		<link rel="stylesheet" href="build/conversational-form-docs.min.css?v=1.0.0">
+		<link rel="stylesheet" href="build/styles/cf/cf-theming.css?v=1.0.0">
+		
+		<!-- favicon -->
+		<link rel="icon" href="images/logo32.png">
+
+		<script type="text/javascript" src="https://cf-4053.kxcdn.com/conversational-form/0.9.6/conversational-form.min.js" crossorigin></script>
+	</head>
+	<body>
+		<script src="build/conversational-form-examples.min.js" id="examples-script"></script>
+
+
+
+		<main class="content">
+			<menu id="small-screen-menu">
+				<h2>Conversational Form examples</h2>
+
+				<div class="switch-btn">
+					<label class="switch">
+						<input type="checkbox" onclick="window.conversationalFormExamples.toggleConversation(event)">
+						<div class="slider round"></div>
+					</label>
+				</div>
+
+				<div class="hamburger-btn" onclick="window.conversationalFormExamples.toggleMenuState(event)">
+					<svg viewBox="0 0 29 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+							<g transform="translate(-325.000000, -87.000000)" stroke="#FFFFFF" stroke-width="2">
+								<g transform="translate(325.000000, 87.000000)">
+									<path d="M27.4802431,7 L1.23827993,7"></path>
+									<path d="M27.4802431,1 L1.23827993,1"></path>
+									<path d="M27.4802431,13 L1.23827993,13"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</menu>
+
+			<div class="switch-btn" id="cf-toggle-btn" data-label="Enable Conversational Form" data-label-toggled="Disable Conversational Form">
+				<label class="switch">
+					<input type="checkbox" onclick="window.conversationalFormExamples.toggleConversation(event)">
+					<div class="slider round"></div>
+				</label>
+			</div>
+
+			<section id="info" role="info">
+				<div class="close-btn" onclick="window.conversationalFormExamples.toggleMenuState()">
+					<svg viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+							<g transform="translate(-328.000000, -83.000000)" stroke="#FFFFFF" stroke-width="2">
+								<g id="close" transform="translate(329.000000, 84.000000)">
+									<path d="M19.6371966,19.2779351 L1.08132646,0.722064927"></path>
+									<path d="M19.4923318,0.722064927 L0.936461672,19.2779351"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+<a href="index.html" style="text-decoration: none"> 
+				<h3 class="logo-text" style="font-size: 28px">
+				<img src="images/logo32.png" style="max-height: 40px; margin-bottom: -12px"> coform
+				</h3></a>
+
+
+				<article>
+					<h1 id="writer">
+						Newsletter Sign-up Example
+					</h1>
+					<h2>
+						Quick and simple, the perfect newsletter sign-up form.
+
+					</h2>
+					<div class="github-button__outer">
+						<a class="button-cta" 
+							href="beta-access.html">Get Early Access</a>
+					</div>
+					
+					<footer>
+<h3>
+							<a href="beta-access.html" target="_blank">Need help improving your forms and surveys?</a>&nbsp&nbsp
+							<a href="tos.html" target="_blank">Terms of Service</a>&nbsp&nbsp
+							<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+						</h3>
+						
+					</footer>
+				</article>
+			</section>
+
+			<section role="form">
+			<div class="form-outer">
+
+			<form id="co-billing-form" >
+				<li class="fields">
+							<div class="field radiocontrol">
+								<label class="checkbox" for="billing:newsletter2">
+									<input cf-questions="Do you want to sign up to our newsletter?" cf-label="Yes please!" type="checkbox" name="billing[newsletter]2" id="billing:newsletter2" value="1" checked="checked" title="Tilmeld nyhedsbrev" class="radio">
+									Newsletter
+								</label>
+							</div>
+						</li>
+					
+				
+								<li class="fields">
+											<div class="field">
+										<label for="billing:email" class="required"><em>*</em>Type your email below!</label>
+										<div class="input-box">
+											<input
+												type="email"
+												autocapitalize="off"
+												autocorrect="off"
+												spellcheck="false"
+												name="billing[email]"
+												id="billing:email"
+												value=""
+												title="E-mailadresse"
+												class="input-text validate-email required-entry"
+
+												pattern="^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$"
+											>
+											<!-- above pattern that checks for correct email -->
+										</div>
+									</div>
+									
+				</div>
+
+					</form>
+
+				</div>
+			</section>
+
+			<section id="cf-context" role="cf-context" cf-context>
+				
+			</section>
+		</main>
+
+
+		<script>
+			window.onload = function(){
+
+				var conversationalForm = window.cf.ConversationalForm.startTheConversation({
+					formEl: document.getElementById("co-billing-form"),
+					context: document.getElementById("cf-context"),
+					userImage: ""
+				});
+			};
+		</script>
+	</body>
+</html>
