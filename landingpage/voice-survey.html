@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Your conversational data collection platform</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+
+		<meta name="description" content="turn any form into a conversational form interface">
+		<meta name="keywords" content="conversational interfaces, conversational form, interface, bot, cui">
+
+		<link rel="author" href="sight"/>
+		<link rel="publisher" href="coform.io/>
+
+		<!-- Twitter -->
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Turning web forms into conversations"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="images/share_img.jpg" />
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+
+		<link rel="stylesheet" href="build/conversational-form-docs.min.css?v=1.0.0">
+		
+		<!-- file to overwrite Conversational Form styles -->
+		<link rel="stylesheet" href="build/styles/cf/cf-theming.css?v=1.0.0">
+
+		<link rel="icon" href="images/logo32.png">
+	</head>
+
+	<body>
+		<!-- Load Conversational Form (v0.9.6) -->
+		 <script type="text/javascript" src="https://cf-4053.kxcdn.com/conversational-form/0.9.6/conversational-form.min.js?v=1.0.0" crossorigin></script>   
+		<!-- Load docs -->
+		 <script src="build/conversational-form-docs.min.js?v=1.0.0"></script>   
+
+		<!-- dev -> -->
+		<!-- <script src="build/cf/ConversationalFormDocs.js"></script>
+		<script id="conversational-form-development" src="../dist/conversational-form.js"></script>
+		<link rel="stylesheet" href="../dist/conversational-form.min.css">   -->
+
+		<main id="conversational-form-docs" class="content">
+			<menu id="small-screen-menu">
+				<h2>Coform</h2>
+				<div class="switch-btn">
+					<label class="switch">
+						<input type="checkbox" onclick="window.conversationalFormDocs.toggleConversation(event)">
+						<div class="slider round"></div>
+					</label>
+				</div>
+
+				<div class="hamburger-btn" onclick="window.conversationalFormDocs.toggleMenuState(event)">
+					<svg viewBox="0 0 29 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+							<g transform="translate(-325.000000, -87.000000)" stroke="#FFFFFF" stroke-width="2">
+								<g transform="translate(325.000000, 87.000000)">
+									<path d="M27.4802431,7 L1.23827993,7"></path>
+									<path d="M27.4802431,1 L1.23827993,1"></path>
+									<path d="M27.4802431,13 L1.23827993,13"></path>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</menu>
+			<div class="switch-btn" id="cf-toggle-btn" data-label="Enable Conversational Form" data-label-toggled="Disable Conversational Form">
+				<label class="switch">
+					<input type="checkbox" onclick="window.conversationalFormDocs.toggleConversation(event)">
+					<div class="slider round"></div>
+				</label>
+			</div>
+			<section id="info" role="info">
+			<a href="index.html" style="text-decoration: none"> 
+				<h3 class="logo-text" style="font-size: 28px">
+				<img src="images/logo32.png" style="max-height: 40px; margin-bottom: -12px"> coform
+				</h3></a>
+				<article>
+					<h1 id="writer">
+						Get Conversational
+					</h1>
+					<h2>
+						You heard that right! Fill out a form using your voice. 
+
+					</h2>
+					<div class="github-button__outer">
+						<a class="button-cta" 
+							href="examples.html">See More Examples</a>
+						<a class="button-example" 
+							href="beta-access.html" data-style="mega" >Get Early Access</a>
+					</div>
+					
+					<footer>
+<h3>
+							<a href="beta-access.html" target="_blank">Need help improving your forms and surveys?</a>&nbsp&nbsp
+							<a href="tos.html" target="_blank">Terms of Service</a>&nbsp&nbsp
+							<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+						</h3>
+						
+					</footer>
+				</article>
+			</section>
+
+			<section id="form" role="form">
+				<form id="cf-form" method="post" action="https://api.formbucket.com/f/buk_YR7xGobkQQBP0bmXAWXtxn1B">
+
+					<fieldset>
+						<label for="name">What's your name?</label>
+						<input required cf-questions="Hey there! It’s nice to meet you — what should I call you?" type="text" name="name" id="name">
+					</fieldset>
+
+					<fieldset cf-questions="That’s great, {name}! Can you believe it’s this easy to use your voice?">
+						<h3>Can you believe it’s this easy to use your voice?</h3>
+						<label for="believe-1">Yes</label>
+						<input type="radio" name="believe" id="believe-1" value="yes">
+
+						<label for="believe-2">No</label>
+						<input type="radio" name="believe" id="believe-2" value="no">
+
+						<label for="believe-3">We’re in the future!</label>
+						<input type="radio" name="believe" id="believe-3" value="future">
+					</fieldset>
+
+					<fieldset>
+						<label for="country">Where are you from?</label>
+						<input required cf-questions="And where are you from?" type="text" name="country" id="country">
+					</fieldset>
+
+					<fieldset>
+						<label for="season">Favourite season</label>
+						<input required cf-questions="Lovely, I always wanted to visit {country}. What’s your favorite season of the year there?" type="text" name="season" id="season">
+					</fieldset>
+
+					<fieldset cf-questions="Wow, that’s cool, I love {season} too, but spring is my favorite!&&What’s your favorite color?">
+						<h3>Favourite color</h3>
+						<label for="color-1">Red</label>
+						<input type="radio" name="color" id="color-1" value="red">
+
+						<label for="color-2">Blue</label>
+						<input type="radio" name="color" id="color-2" value="blue">
+
+						<label for="color-3">Yellow</label>
+						<input type="radio" name="color" id="color-3" value="yellow">
+
+						<label for="color-4">Purple</label>
+						<input type="radio" name="color" id="color-4" value="purple">
+					</fieldset>
+
+					<fieldset cf-questions="Oh, I like {color} too.&&I can’t believe we’re just talking... Do you think this is the future of web forms?">
+						<h3>Is this the future of webforms?</h3>
+						<label for="future-1">Yes</label>
+						<input type="radio" name="future" id="future-1" value="yes">
+
+						<label for="future-2">No</label>
+						<input type="radio" name="future" id="future-2" value="no">
+
+						<label for="future-3">Not sure</label>
+						<input type="radio" name="future" id="future-3" value="not-sure">
+					</fieldset>
+
+					<fieldset cf-questions="Shall we do that again? Just say yes!">
+						<h3>Shall we do that again?</h3>
+						<label for="repeat-1">Yes</label>
+						<input type="radio" name="repeat-voice" id="repeat-1" value="yes">
+
+						<label for="repeat-2">No</label>
+						<input type="radio" name="repeat-voice" id="repeat-2" value="no">
+					</fieldset>
+
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</section>
+
+			<section id="cf-context" role="cf-context" cf-context>
+				
+			</section>
+		</main>
+	</body>
+
+</html>
